@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # install python dependencies
-pip install -r requirements.txt
-
-git init
+pip install -r api/requirements.txt
 
 # set git config
 git config --global user.email "abhishek@a6k.me"

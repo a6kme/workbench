@@ -1,17 +1,23 @@
 import os
-from pprint import pprint
+import shutil
 
-# Get the Cookiecutter configuration
-config = {
-    "project_name": "{{ cookiecutter.project_name }}",
-    "project_slug": "{{ cookiecutter.project_slug }}",
-    "include_ui": "{{ cookiecutter.include_ui }}",
-    "framework": "{{ cookiecutter.framework }}",
-    "use_database": "{{ cookiecutter.use_database }}",
-    "database": "{{ cookiecutter.database }}",
-    "django_secret_key": "{{ cookiecutter.django_secret_key }}",
-}
+is_django = '{{cookiecutter.framework}}' == 'django'
+is_fastapi = '{{cookiecutter.framework}}' == 'fastapi'
+include_ui = '{{cookiecutter.include_ui}}' == 'yes'
 
-# Print the configuration
-print("\nProject configuration used during generation:")
-pprint(config)
+assert is_django or is_fastapi
+
+if is_django:
+    # remove api_fastapi directory and rename api_django to api
+    shutil.rmtree('api_fastapi')
+    os.rename('api_django', 'api')
+
+if is_fastapi:
+    # remove api_django directory and rename api_fastapi to api
+    shutil.rmtree('api_django')
+    os.rename('api_fastapi', 'api')
+
+if not include_ui:
+    shutil.rmtree('ui')
+
+print("Project initialized successfully! Happy building!!")

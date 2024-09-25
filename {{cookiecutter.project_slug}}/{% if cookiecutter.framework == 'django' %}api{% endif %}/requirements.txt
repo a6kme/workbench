@@ -1,0 +1,5 @@
+django==5.1
+psycopg-binary==3.2.1 # ensure that psycopg3 is installed after django
+loguru==0.7.2
+dj_database_url==2.2.0
+python-dotenv==1.0.1

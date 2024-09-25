@@ -7,9 +7,5 @@
     "database": ["postgresql", "mongodb"],
     "git_email": "abhishek@a6k.me",
     "git_username": "abhishek",
-    "django_secret_key": "",
-    "__prompts__": {
-        "project_name": "Select your package name:",
-        "django_secret_key": "python -c \"import secrets; print(secrets.token_urlsafe(32))\""
-    }
+    "django_secret_key": "adsf"
 }

@@ -20,4 +20,7 @@ if is_fastapi:
 if not include_ui:
     shutil.rmtree('ui')
 
+# change the permissions of .devcontainer/setup.sh to be executable
+os.chmod('.devcontainer/setup.sh', 0o755)
+
 print("Project initialized successfully! Happy building!!")

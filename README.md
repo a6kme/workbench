@@ -1,4 +1,6 @@
 ### My workbench as cookiecutter
 
 ### RoadMap
-- [ ] Use cookiecutter to ask questions
+- [x] Use cookiecutter to ask questions
+- [ ] Check if Django works
+- [ ] Check if UI works

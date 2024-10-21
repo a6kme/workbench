@@ -3,9 +3,7 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "include_ui": ["yes", "no"],
     "framework": ["django", "fastapi"],
-    "use_database": ["yes", "no"],
-    "database": ["postgresql", "mongodb"],
     "git_email": "abhishek@a6k.me",
     "git_username": "abhishek",
-    "django_secret_key": "adsf"
+    "superuser_email": "{{cookiecutter.git_email}}"
 }

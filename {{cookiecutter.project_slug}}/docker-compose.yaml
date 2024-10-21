@@ -1,8 +1,7 @@
+version: '3'
 services:
-  {% if cookiecutter.database == 'postgresql' -%}
-  postgres:
-    image: pgvector/pgvector:pg16
-    container_name: postgres
+  db:
+    image: postgres:17
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -10,10 +9,17 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-  {%- endif %}
+      - postgres_data:/var/lib/postgresql/data
+
+  # RabbitMQ Service
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: password
+    ports:
+      - "5672:5672"   # RabbitMQ service port
+      - "15672:15672" # RabbitMQ management UI
 
 volumes:
-  {% if cookiecutter.database == 'postgresql' -%}
-  postgres-data:
-  {%- endif %}
+  postgres_data:

@@ -33,7 +33,8 @@
             "extensions": [
                 "ms-toolsai.jupyter",
                 "ms-python.black-formatter",
-                "ms-python.isort"
+                "ms-python.isort",
+                "rvest.vs-code-prettier-eslint"
             ]
         }
     },

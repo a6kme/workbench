@@ -2,10 +2,10 @@
 
 ### RoadMap
 - [x] Use cookiecutter to ask questions
-- [ ] Check if Django works
-- [ ] Check if UI works
-- [ ] Add authentication using supabase
-- [ ] Check if social auth works after integration with UI
+- [x] Check if Django works
+- [x] Check if UI works
+- [x] Add authentication using supabase
+- [x] Check if social auth works after integration with UI
 - [ ] Add celery
 - [ ] Add LLM calling capabilities
 - [ ] Add artifacts creation for prompts and responses

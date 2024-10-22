@@ -3,6 +3,8 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "include_ui": ["yes", "no"],
     "framework": ["django", "fastapi"],
+    "supabase_url" : "Supabase project -> Configuration -> API -> Project URL",
+    "supabase_anon_key": "Supabase project -> Configuration -> API -> Anonymous Key",
     "git_email": "abhishek@a6k.me",
     "git_username": "abhishek",
     "superuser_email": "{{cookiecutter.git_email}}"

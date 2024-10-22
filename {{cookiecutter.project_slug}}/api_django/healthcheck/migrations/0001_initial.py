@@ -7,8 +7,8 @@ def create_superuser(apps, schema_editor):
     if not User.objects.filter(username='admin').exists():
         User.objects.create_superuser(
             username='admin',
-            email='{{cookiecutter.superuser_email}}',
-            password='____SUPERUSER_PASSWORD____',
+            email='abhishek@a6k.me',
+            password='0DAx9kllBEw',
         )
 
 def delete_superuser(apps, schema_editor):

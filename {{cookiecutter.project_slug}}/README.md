@@ -16,7 +16,6 @@
 
 {% if cookiecutter.include_ui == 'yes' -%}
 ### Run UI
-1. Install node version `nvm install 20`
 1. `cd ui`
 1. `npm install`
 1. `npm run dev`

@@ -6,9 +6,8 @@ pip install -r api/requirements.txt
 
 sudo apt update
 
-{% if cookiecutter.use_database == 'yes' and cookiecutter.database == 'postgresql' -%}
+# install postgresql client to access dbshell or psql command
 sudo apt install -y postgresql-client
-{%- endif %}
 
 git init
 
@@ -18,4 +17,5 @@ git config --global user.name {{cookiecutter.git_username}}
 git config --global --add safe.directory /workspaces/notebooks
 
 # setup node
+source $NVM_DIR/nvm.sh
 nvm install 20

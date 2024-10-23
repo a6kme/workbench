@@ -5,25 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "UI Client",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}/ui"
-        },
-        {
-            "name": "UI Server",
+            "name": "Next",
             "type": "node-terminal",
             "request": "launch",
             "command": "npm run dev",
             "cwd": "${workspaceFolder}/ui",
         },
         {
-            "name": "Django",
+            "name": "Uvicorn",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/api/manage.py",
-            "args": ["runserver"],
+            "module": "uvicorn",
+            "args": ["api.asgi:application", "--port", "8000", "--reload"],
+            "cwd": "${workspaceFolder}/api",
             "django": true
         },
         {

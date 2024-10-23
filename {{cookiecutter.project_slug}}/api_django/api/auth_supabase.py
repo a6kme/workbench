@@ -5,7 +5,6 @@ from apps.authentication.models import UserProfile
 from django.contrib.auth.models import User
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.exceptions import AuthenticationFailed
-
 from supabase import Client, create_client
 
 logger = logging.getLogger(__name__)

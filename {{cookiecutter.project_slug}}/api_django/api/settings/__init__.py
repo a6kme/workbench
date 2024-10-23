@@ -17,6 +17,7 @@ from pathlib import Path
 # load environment variable as early as possible
 from ._ import *
 from .apps import *
+from .celery import *
 from .database import *
 from .environment import Environment
 from .log import get_logging_config
@@ -35,7 +36,10 @@ SECRET_KEY = DJANGO_SECRET_KEY
 # Debug is True if the environment is not production
 DEBUG = os.environ.get("ENVIRONMENT") != Environment.PRODUCTION
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "wb-test.onrender.com"
+]
 
 
 MIDDLEWARE = [
@@ -116,7 +120,17 @@ LOGGING = get_logging_config(BASE_DIR, DEBUG)
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://wb-test-psi.vercel.app"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+ASGI_APPLICATION = 'api.asgi.application'
+
+# TODO: Setup Redis here
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}

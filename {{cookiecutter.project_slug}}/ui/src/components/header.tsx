@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className="flex flex-1 p-4">
       <div className="hidden md:block md:flex-1">
-        <h1 className="text-2xl font-bold">{{cookiecutter.project_name.title()}}</h1>
+        <h1 className="text-2xl font-bold">Wb Test</h1>
       </div>
 
       {user ? (

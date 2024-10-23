@@ -7,6 +7,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "corsheaders",
+    "channels",
     "healthcheck",
 
     # Custom Apps

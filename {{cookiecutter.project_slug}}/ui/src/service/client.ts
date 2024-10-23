@@ -19,7 +19,13 @@ class ClientService {
     return headers;
   }
 
-  async post(endpoint: string, payload: any) {
+  getWebSocket(endpoint: string) {
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const wsBackendUrl = backendUrl?.replace("http", "ws");
+    return new WebSocket(`${wsBackendUrl}/${endpoint}?token=${this.authToken}`);
+  }
+
+  async post(endpoint: string, payload: Record<string, unknown>) {
     const headers = this.getHeaders();
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/${endpoint}`,
@@ -35,7 +41,7 @@ class ClientService {
     throw new Error("Failed to fetch");
   }
 
-  async get(endpoint: string, parameters: any) {
+  async get(endpoint: string, parameters: Record<string, string>) {
     const headers = this.getHeaders();
     const url = new URL(`${process.env.NEXT_PUBLIC_BACKEND_URL}/${endpoint}`);
     Object.keys(parameters).forEach((key) =>

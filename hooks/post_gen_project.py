@@ -19,6 +19,9 @@ if is_fastapi:
     shutil.rmtree('api_django')
     os.rename('api_fastapi', 'api')
 
+# move .env file to api directory
+shutil.move('.env', 'api/.env')
+
 if not include_ui:
     shutil.rmtree('ui')
 
@@ -36,7 +39,7 @@ def find_and_replace_in_file(file_path):
 
     # Replace the old text with new text using regex
     new_content = re.sub('____SUPERUSER_PASSWORD____', superuser_password, content)
-    new_content = re.sub('____DJANGO_SECRET_KEY____', django_secret_key, new_content)
+    new_content = re.sub('____SECRET_KEY____', django_secret_key, new_content)
 
     # Write the new content back to the file if there's any change
     if new_content != content:

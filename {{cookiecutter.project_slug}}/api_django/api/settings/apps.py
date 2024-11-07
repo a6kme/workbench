@@ -8,7 +8,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "channels",
-    "healthcheck",
 
     # Custom Apps
     "apps.authentication"

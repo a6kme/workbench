@@ -9,10 +9,8 @@
 - [x] Add celery
 - [x] Add websockets
 - [x] Add deployment documentation
+- [ ] Relative imports not working
+- [ ] Auto imports not working (Cmd + . in VSCode)
 - [ ] Add LLM calling capabilities with artefacts creation
 - [ ] Add testing mechanism
 - [ ] Add featureflag mechanism
-
-
-### ToDo
-- Deprecate HealthCheck and migrate django superuser creation in AUthentication App

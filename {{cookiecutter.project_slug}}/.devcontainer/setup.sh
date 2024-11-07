@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# install python dependencies
+install python dependencies
 pip install --upgrade pip
 pip install -r api/requirements.txt
 
@@ -9,13 +9,17 @@ sudo apt update
 # install postgresql client to access dbshell or psql command
 sudo apt install -y postgresql-client
 
-git init
+echo "Setting up git config in directory $(pwd)"
 
 # set git config
-git config --global user.email {{cookiecutter.git_email}}
-git config --global user.name {{cookiecutter.git_username}}
-git config --global --add safe.directory /workspaces/notebooks
+git config --global init.defaultBranch main
+git config --global user.email abhishek@a6k.me
+git config --global user.name abhishek
+git config --global --add safe.directory "$(pwd)"
+
+git init
 
 # setup node
 source $NVM_DIR/nvm.sh
 nvm install 20
+cd ui && npm install

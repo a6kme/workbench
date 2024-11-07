@@ -12,6 +12,18 @@
             "cwd": "${workspaceFolder}/ui",
         },
         {
+            "name": "Current Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/api",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/api"
+            }
+        },
+        {%- if cookiecutter.framework == 'django' %}
+        {
             "name": "Uvicorn",
             "type": "debugpy",
             "request": "launch",
@@ -27,6 +39,22 @@
             "program": "${workspaceFolder}/api/manage.py",
             "args": ["run_local"],
             "django": true
-        }
+        },
+        {%- endif %}
+        {%- if cookiecutter.framework == 'fastapi' %}
+        {
+            "name": "Uvicorn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--reload"
+            ],
+            "cwd": "${workspaceFolder}/api",
+            "envFile": "${workspaceFolder}/api/.env",
+        },
+        {%- endif %}
+
     ]
 }

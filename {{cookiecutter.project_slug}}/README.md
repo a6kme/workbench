@@ -19,6 +19,8 @@
 
 ### Deployment
 1. Copy the databae URL from supabase
+1. Configure the Provider in Supabase Authentication
+1. Configure the Site URL in URL Configuration under Authentication
 1. Create a CloudAMQP account and a RabbitMQ queue, and get the broker URL
 1. Create a project in Render 
 1. Deploy the backend on Render and set the environment variables

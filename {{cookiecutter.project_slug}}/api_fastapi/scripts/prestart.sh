@@ -1,16 +1,18 @@
 #! /usr/bin/env bash
 
-# Set PYTHONPATH to the parent directory of the script's location
-export PYTHONPATH="$(dirname "$(dirname "$(realpath "$0")")")"
-
 set -e
 set -x
 
+# Set PYTHONPATH to the parent directory of the script's location
+export PYTHONPATH="$(dirname "$(dirname "$(dirname "$(realpath "$0")")")")"
+
+echo $PTYHONPATH
+
 # Let the DB start
-python app/backend_pre_start.py
+python api/backend_pre_start.py
 
 # Run migrations
-alembic upgrade head
+alembic -c api/alembic.ini upgrade head
 
 # Create initial data in DB
-python app/initial_data.py
+# python api/initial_data.py

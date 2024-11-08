@@ -1,4 +1,3 @@
-import os
 from logging.config import fileConfig
 
 from alembic import context
@@ -10,7 +9,7 @@ config = context.config
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
-fileConfig(config.config_file_name)
+fileConfig(config.config_file_name or "alembic.ini")
 
 # add your model's MetaData object here
 # for 'autogenerate' support
@@ -18,8 +17,8 @@ fileConfig(config.config_file_name)
 # target_metadata = mymodel.Base.metadata
 # target_metadata = None
 
-from app.auth.models import SQLModel  # noqa
-from app.core.config import settings  # noqa
+from api.forge.sdk.db.models import SQLModel  # noqa
+from api.settings import settings  # noqa
 
 target_metadata = SQLModel.metadata
 

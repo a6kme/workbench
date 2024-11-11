@@ -4,9 +4,10 @@ in `api/alembic/env.py` will use the `SQLModel.metadata` to generate the migrati
 """
 
 from datetime import datetime
+from typing import Any
 
 from pydantic import EmailStr
-from sqlalchemy import BigInteger, Column, DateTime, func
+from sqlalchemy import JSON, BigInteger, Column, DateTime, func
 
 # https://github.com/fastapi/sqlmodel/discussions/828
 from sqlmodel import Field, SQLModel  # type: ignore[reportUnknownVariableType]
@@ -23,8 +24,13 @@ class UserModel(SQLModel, table=True):
     is_active: bool = True
     is_superuser: bool = False
     full_name: str = Field(default=None, max_length=255)
-    federated_user_id: str = Field(default=None, max_length=255)
+    federated_user_id: str = Field(
+        default=None, index=True, unique=True, max_length=255
+    )
     avatar_url: str | None = Field(default=None, max_length=255)
+    federated_provider_response_data: dict[str, Any] = Field(
+        default_factory=dict, sa_column=Column(JSON)
+    )
     created_at: datetime = Field(
         default_factory=datetime.now, sa_column=Column(DateTime, default=func.now())
     )

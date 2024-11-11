@@ -1,5 +1,6 @@
 "use client";
 
+import { UserPublic } from "@/client/types.gen";
 import { logger } from "@/lib/logger";
 import { getUser } from "@/service/auth";
 import { clientService } from "@/service/client";
@@ -13,13 +14,8 @@ import React, {
   useState,
 } from "react";
 
-export interface User {
-  email: string;
-  name: string;
-}
-
 interface AuthContextType {
-  user: User | null;
+  user: UserPublic | null;
   resolved: boolean;
   setAuthContext: React.Dispatch<React.SetStateAction<AuthContextType>>;
 }
@@ -66,11 +62,11 @@ export const AuthProvider = ({
         clientService.setToken(session.access_token);
 
         // If the user is logged in, get the user and state from application server
-        const { user } = await getUser();
+        const { data } = await getUser();
 
         setAuthContext((prev: AuthContextType) => ({
           ...prev,
-          user,
+          user: data ?? null,
           resolved: true,
         }));
       }
@@ -88,7 +84,7 @@ export const AuthProvider = ({
   }, [router]);
 
   return (
-    <AuthContext.Provider value={{'{{'}} ...authContext, setAuthContext {{'}}'}}>
+    <AuthContext.Provider value={{ ...authContext, setAuthContext }}>
       {children}
     </AuthContext.Provider>
   );

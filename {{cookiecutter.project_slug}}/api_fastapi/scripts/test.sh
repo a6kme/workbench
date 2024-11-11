@@ -3,6 +3,8 @@
 set -e
 set -x
 
-coverage run --source=app -m pytest
+export ENVIRONMENT="test"
+
+coverage run --source=api -m pytest
 coverage report --show-missing
 coverage html --title "${@-coverage}"

@@ -1,0 +1,203 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjVhYUpxR0F1L0EyRHAvU3giLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2V4aGdzb2t0YmR4Z2JjbHFleWxtLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI1ZjM0NzU5Yi1iZjhhLTRhNGYtODgwMS0wNGUyYzZiMzhiNDkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzMxMDc0NTcxLCJpYXQiOjE3MzEwNzA5NzEsImVtYWlsIjoiYWJoaS5oYWt1bmFtYXRhdGFAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJnb29nbGUiLCJwcm92aWRlcnMiOlsiZ29vZ2xlIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwiZW1haWwiOiJhYmhpLmhha3VuYW1hdGF0YUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwicHJvdmlkZXJfaWQiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkiLCJzdWIiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvYXV0aCIsInRpbWVzdGFtcCI6MTczMDk5Njg1NX1dLCJzZXNzaW9uX2lkIjoiMTI0Njk5NDUtNDIzYy00N2U0LWExZDktNzQ0MWY0YTUzNzlkIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.esCxax9fJxX7Adg2BIESlP6gnFp1r17jSoL8oYjyeGU
+      connection:
+      - keep-alive
+      content-type:
+      - application/json;charset=UTF-8
+      host:
+      - exhgsoktbdxgbclqeylm.supabase.co
+      user-agent:
+      - python-httpx/0.27.2
+      x-client-info:
+      - supabase-py/2.10.0
+      x-supabase-api-version:
+      - '2024-01-01'
+    method: GET
+    uri: https://exhgsoktbdxgbclqeylm.supabase.co/auth/v1/user
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+xUy27bMBD8lUJnS+ZLIiWgQN2ghz6DpA6KpAgEiqIs1npBJJ2mhv+9pBMHrhEH
+        yaWHotJFWs5wuTvLWQeqDLIgrjChcVqERcV4SDipQsYADAGRSCQFZgVJg0nArQdza2rZGSW4kaWL
+        jn0jHwnLlqvGx4taRTVf2o633Lj3zcKvRKJvd6hc9F2lxlaWOTeOggAiIQQhwHOQZpBkgEQkxe65
+        cpSh7juf0H2+iNdwbXKtFl2uun28K5POYZIhmuE4SgilCfV4Pgx5Kw0v3ZmDbB0MY79SpRwdcdH3
+        C1f05CGmg+z7Lnq9mQRWy/EPMl+5jzG3o29Jbcygs+m0qXF0R/J4V4xxDfSNmfLp7GTBevHpovky
+        m/3MT+fU4pvl6ftLeyESs/rY0pszTFJzedL8SNpfn7+df3339kMNz85vXus0CcULFVjJUVXKCZeZ
+        0cpJUNmmyR3eN3rm+LqWy1dL2/LRUZTWe1VwIXrbGX1fyv22x7hb9fbSVbzRLt+ghLGj/HvN2SmX
+        by8AhJARAgCiiEAKIaIY+InXtji66mR2G7iJN0p6/de739u7PSvJEiwoDQuWkpAkSRGmFStDwjgr
+        YyEBLvw9eTL/do5eckUfjvB/8P7lwXvMi47524EfMgTo1g/FKL1VPwmFd9Zph/IQeuCaOAEwvnqm
+        9pvr52RPEEHseHY2hzgDKIthlMYIAnS1HZCcd3132/ZW30u8+Q0AAP//AwD2+99f5AYAAA==
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 8df5c7c39c45c462-BLR
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - default-src 'none'; sandbox
+      content-type:
+      - application/json
+      date:
+      - Fri, 08 Nov 2024 13:06:27 GMT
+      sb-gateway-version:
+      - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Origin, Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-envoy-attempt-count:
+      - '1'
+      x-envoy-upstream-service-time:
+      - '15'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjVhYUpxR0F1L0EyRHAvU3giLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2V4aGdzb2t0YmR4Z2JjbHFleWxtLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI1ZjM0NzU5Yi1iZjhhLTRhNGYtODgwMS0wNGUyYzZiMzhiNDkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzMxMDc0NTcxLCJpYXQiOjE3MzEwNzA5NzEsImVtYWlsIjoiYWJoaS5oYWt1bmFtYXRhdGFAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJnb29nbGUiLCJwcm92aWRlcnMiOlsiZ29vZ2xlIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwiZW1haWwiOiJhYmhpLmhha3VuYW1hdGF0YUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwicHJvdmlkZXJfaWQiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkiLCJzdWIiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvYXV0aCIsInRpbWVzdGFtcCI6MTczMDk5Njg1NX1dLCJzZXNzaW9uX2lkIjoiMTI0Njk5NDUtNDIzYy00N2U0LWExZDktNzQ0MWY0YTUzNzlkIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.esCxax9fJxX7Adg2BIESlP6gnFp1r17jSoL8oYjyeGU
+      connection:
+      - keep-alive
+      content-type:
+      - application/json;charset=UTF-8
+      host:
+      - exhgsoktbdxgbclqeylm.supabase.co
+      user-agent:
+      - python-httpx/0.27.2
+      x-client-info:
+      - supabase-py/2.10.0
+      x-supabase-api-version:
+      - '2024-01-01'
+    method: GET
+    uri: https://exhgsoktbdxgbclqeylm.supabase.co/auth/v1/user
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA+xUy27bMBD8lUJnS+ZLIiWgQN2ghz6DpA6KpAgEiqIs1npBJJ2mhv+9pBMHrhEH
+        yaWHotJFWs5wuTvLWQeqDLIgrjChcVqERcV4SDipQsYADAGRSCQFZgVJg0nArQdza2rZGSW4kaWL
+        jn0jHwnLlqvGx4taRTVf2o633Lj3zcKvRKJvd6hc9F2lxlaWOTeOggAiIQQhwHOQZpBkgEQkxe65
+        cpSh7juf0H2+iNdwbXKtFl2uun28K5POYZIhmuE4SgilCfV4Pgx5Kw0v3ZmDbB0MY79SpRwdcdH3
+        C1f05CGmg+z7Lnq9mQRWy/EPMl+5jzG3o29Jbcygs+m0qXF0R/J4V4xxDfSNmfLp7GTBevHpovky
+        m/3MT+fU4pvl6ftLeyESs/rY0pszTFJzedL8SNpfn7+df3339kMNz85vXus0CcULFVjJUVXKCZeZ
+        0cpJUNmmyR3eN3rm+LqWy1dL2/LRUZTWe1VwIXrbGX1fyv22x7hb9fbSVbzRLt+ghLGj/HvN2SmX
+        by8AhJARAgCiiEAKIaIY+InXtji66mR2G7iJN0p6/de739u7PSvJEiwoDQuWkpAkSRGmFStDwjgr
+        YyEBLvw9eTL/do5eckUfjvB/8P7lwXvMi47524EfMgTo1g/FKL1VPwmFd9Zph/IQeuCaOAEwvnqm
+        9pvr52RPEEHseHY2hzgDKIthlMYIAnS1HZCcd3132/ZW30u8+Q0AAP//AwD2+99f5AYAAA==
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 8df5c7dffcb5c462-BLR
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - default-src 'none'; sandbox
+      content-type:
+      - application/json
+      date:
+      - Fri, 08 Nov 2024 13:06:31 GMT
+      sb-gateway-version:
+      - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Origin, Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-envoy-attempt-count:
+      - '1'
+      x-envoy-upstream-service-time:
+      - '2'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjVhYUpxR0F1L0EyRHAvU3giLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2V4aGdzb2t0YmR4Z2JjbHFleWxtLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI1ZjM0NzU5Yi1iZjhhLTRhNGYtODgwMS0wNGUyYzZiMzhiNDkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzMxMDc0NTcxLCJpYXQiOjE3MzEwNzA5NzEsImVtYWlsIjoiYWJoaS5oYWt1bmFtYXRhdGFAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJnb29nbGUiLCJwcm92aWRlcnMiOlsiZ29vZ2xlIl19LCJ1c2VyX21ldGFkYXRhIjp7ImF2YXRhcl91cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwiZW1haWwiOiJhYmhpLmhha3VuYW1hdGF0YUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiQWJoaXNoZWsga3VtYXIiLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMVWxOQUF4X09UN3Uzd2tPSVl1VWM2dHZLbTd3UTM0OXRZQ2xqNm16TVdSU0VCSmgxUVJ3PXM5Ni1jIiwicHJvdmlkZXJfaWQiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkiLCJzdWIiOiIxMTE4NDQwMDI3MjQxNzExMjczMDkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvYXV0aCIsInRpbWVzdGFtcCI6MTczMDk5Njg1NX1dLCJzZXNzaW9uX2lkIjoiMTI0Njk5NDUtNDIzYy00N2U0LWExZDktNzQ0MWY0YTUzNzlkIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.esDxax9fJxX7Adg2BIESlP6gnFp1r17jSoL8oYjyeGU
+      connection:
+      - keep-alive
+      content-type:
+      - application/json;charset=UTF-8
+      host:
+      - exhgsoktbdxgbclqeylm.supabase.co
+      user-agent:
+      - python-httpx/0.27.2
+      x-client-info:
+      - supabase-py/2.10.0
+      x-supabase-api-version:
+      - '2024-01-01'
+    method: GET
+    uri: https://exhgsoktbdxgbclqeylm.supabase.co/auth/v1/user
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA6pWSs5PSVWyUkpKTInPKi9R0lHKTS0uTkwHiWXmlSXmZKYoeIWHWCmU5iUm5aQq
+        lOQrFCQWFacq5BcplKUWZaZVKhRnpucllpQWpeoAZbNT8xACCpnFClBDrLCKKtUCAAAA//8DAPAG
+        fPSBAAAA
+    headers:
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      cf-ray:
+      - 8df5c7e27ff8c462-BLR
+      content-encoding:
+      - gzip
+      content-security-policy:
+      - default-src 'none'; sandbox
+      content-type:
+      - application/json
+      date:
+      - Fri, 08 Nov 2024 13:06:31 GMT
+      sb-gateway-version:
+      - '1'
+      server:
+      - cloudflare
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Origin, Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-envoy-attempt-count:
+      - '1'
+      x-envoy-upstream-service-time:
+      - '1'
+      x-sb-error-code:
+      - bad_jwt
+      x-supabase-api-version:
+      - '2024-01-01'
+    status:
+      code: 403
+      message: Forbidden
+version: 1

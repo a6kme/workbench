@@ -9,7 +9,7 @@ config = context.config
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
-fileConfig(config.config_file_name or "alembic.ini")
+fileConfig(config.config_file_name or "api/alembic.ini")
 
 # add your model's MetaData object here
 # for 'autogenerate' support
@@ -60,8 +60,16 @@ def run_migrations_online():
     and associate a connection with the context.
 
     """
-    configuration = config.get_section(config.config_ini_section)
-    configuration["sqlalchemy.url"] = get_url()
+    configuration: dict[str, str] | None = (
+        config.get_section(  # type: ignore
+            config.config_ini_section
+        )
+        or {}
+    )
+
+    if not configuration["sqlalchemy.url"]:
+        configuration["sqlalchemy.url"] = get_url()
+
     connectable = engine_from_config(
         configuration,
         prefix="sqlalchemy.",

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-client": "openapi-ts -i http://localhost:8000/api/v1/openapi.json -o src/client -c @hey-api/client-axios"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.6",
@@ -16,6 +17,8 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@hey-api/client-axios": "^0.2.10",
+    "@hey-api/openapi-ts": "^0.55.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

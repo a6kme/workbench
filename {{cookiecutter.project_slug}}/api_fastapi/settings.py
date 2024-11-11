@@ -26,6 +26,7 @@ def parse_cors(v: list[str] | str) -> list[str] | str:
 
 class Settings(BaseSettings):
     # Required settings, should be declared in .env
+    # BASE_DIR is api/
     BASE_DIR: Path = Path(__file__).resolve().parent
     model_config = SettingsConfigDict(
         env_file=BASE_DIR / ".env",
@@ -36,7 +37,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str
     SECRET_KEY: str
     DATABASE_URL: PostgresDsn
-    ENVIRONMENT: Literal["local", "staging", "production"]
+    ENVIRONMENT: Literal["local", "staging", "production", "test"]
     BACKEND_CORS_ORIGINS: Annotated[list[AnyUrl] | str, BeforeValidator(parse_cors)]
 
     SUPABASE_URL: str

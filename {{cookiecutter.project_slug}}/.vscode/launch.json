@@ -48,11 +48,28 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "app.main:app",
-                "--reload"
+                "api.forge.api_app:app",
+                "--reload",
+                "--reload-dir",
+                "${workspaceFolder}/api"
             ],
-            "cwd": "${workspaceFolder}/api",
             "envFile": "${workspaceFolder}/api/.env",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Test API",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "api/",
+            ],
+            "envFile": "${workspaceFolder}/api/.env",
+            "env": {
+                "ENVIRONMENT": "test"
+            }
         },
         {%- endif %}
 

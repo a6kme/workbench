@@ -1,3 +1,4 @@
+from fastapi import HTTPException, status
 from gotrue.types import User as GoTrueUser  # type: ignore
 from loguru import logger
 from supabase._async.client import AsyncClient as SupabaseClient
@@ -5,7 +6,6 @@ from supabase._async.client import create_client
 
 from api.forge import app as forge_app
 from api.forge.sdk.schemas.models import User
-from fastapi import HTTPException, status
 
 
 class SupabaseService:
@@ -38,11 +38,18 @@ class SupabaseService:
     def get_or_create_user_object_from_db(self, user: GoTrueUser) -> User:
         assert user.email is not None
 
+        # Check if user exists in database
+        existing_user = forge_app.DATABASE.get_user(federated_user_id=user.id)
+
+        if existing_user:
+            return existing_user
+
         return forge_app.DATABASE.create_user(
             email=user.email,
             federated_user_id=user.id,
-            full_name=user.app_metadata.get("full_name", ""),
+            full_name=user.user_metadata.get("full_name", ""),
             avatar_url=user.user_metadata.get("avatar_url", ""),
+            federated_provider_response_data=user.user_metadata,
         )
 
 

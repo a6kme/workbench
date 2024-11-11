@@ -1,6 +1,6 @@
-import { clientService } from "./client";
+import { usersGetUserProfile } from "@/client/services.gen";
 
 export const getUser = async () => {
-  const response = await clientService.get("api/auth/user/profile/", {});
+  const response = await usersGetUserProfile();
   return response;
 };

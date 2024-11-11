@@ -1,12 +1,25 @@
+import { client } from "@/client/services.gen";
+
+client.setConfig({
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
+});
+
 class ClientService {
   authToken: string | undefined;
+  client: typeof client;
 
   constructor() {
+    this.client = client;
     this.authToken = undefined;
   }
 
   setToken(token: string | undefined) {
     this.authToken = token;
+    client.setConfig({
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 
   getHeaders() {

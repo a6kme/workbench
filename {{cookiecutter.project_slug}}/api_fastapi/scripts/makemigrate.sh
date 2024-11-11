@@ -14,10 +14,12 @@ NC='\033[0m' # No Color
 read -p "Enter the migration name (minimum 5 characters): " migration_name
 
 # Check if the migration name is empty or less than 5 characters
+{%- raw %}
 if [[ -z "$migration_name" || ${#migration_name} -lt 5 ]]; then
   echo -e "${RED}Error: Migration name must be at least 5 characters long.${NC}"
   exit 1
 fi
+{%- endraw %}
 
 # Generate the Alembic revision with the provided migration name
 alembic -c api/alembic.ini revision --autogenerate -m "$migration_name"

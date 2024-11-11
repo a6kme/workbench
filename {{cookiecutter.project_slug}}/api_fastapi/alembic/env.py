@@ -67,7 +67,9 @@ def run_migrations_online():
         or {}
     )
 
-    if not configuration["sqlalchemy.url"]:
+    # While creating a test database, the sqlalchemy.url is set from the
+    # conftest.py. We don't want to override the sqlalchemy.url in that case.
+    if not configuration.get("sqlalchemy.url"):
         configuration["sqlalchemy.url"] = get_url()
 
     connectable = engine_from_config(

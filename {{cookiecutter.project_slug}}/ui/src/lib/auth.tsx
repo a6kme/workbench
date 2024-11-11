@@ -82,14 +82,14 @@ export const AuthProvider = ({
       logger.debug("Unmounting AuthProvider");
     };
   }, [router]);
-
+{%- raw %}
   return (
     <AuthContext.Provider value={{ ...authContext, setAuthContext }}>
       {children}
     </AuthContext.Provider>
   );
 };
-
+{%- endraw %}
 export const useAuthContext = () => {
   return useContext(AuthContext);
 };

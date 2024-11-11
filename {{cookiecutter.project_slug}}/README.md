@@ -9,17 +9,24 @@
 1. `docker compose up`
 
 ### Run API
+{%- if cookiecutter.framework == 'django' %}
 1. `python api/manage.py migrate`
 1. `python api/manage.py runserver`
+{%- endif }
+{%- if cookiecutter.framework == 'fastapi' %}
+1. `sh api/scripts/migrate.sh`
+1. `uvicorn api.forge.api_app:app --reload --reload-dir api` OR Run from the debugger
+{%- endif }
+
 
 ### Run UI
 1. `cd ui`
-1. `npm install`
-1. `npm run dev`
+1. `npm run dev` OR Run from the debugger
 
 ### Deployment
+1. Create a supabase project
 1. Copy the databae URL from supabase
-1. Configure the Provider in Supabase Authentication
+1. Configure the Provider in Supabase Authentication (Google)
 1. Configure the Site URL in URL Configuration under Authentication
 1. Create a CloudAMQP account and a RabbitMQ queue, and get the broker URL
 1. Create a project in Render 

@@ -12,11 +12,11 @@
 {%- if cookiecutter.framework == 'django' %}
 1. `python api/manage.py migrate`
 1. `python api/manage.py runserver`
-{%- endif }
+{%- endif %}
 {%- if cookiecutter.framework == 'fastapi' %}
 1. `sh api/scripts/migrate.sh`
 1. `uvicorn api.forge.api_app:app --reload --reload-dir api` OR Run from the debugger
-{%- endif }
+{%- endif %}
 
 
 ### Run UI
